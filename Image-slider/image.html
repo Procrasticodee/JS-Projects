@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image-slider</title>
+    <link rel="stylesheet" href="image.css">
+</head>
+
+<body>
+    <div class="gallery-wrap">
+        <img src="image/left-arrow.png" id="backBtn">
+        <div class="gallery">
+            <div>
+                <span><img src="image/ash.jpeg"></span>
+                <span><img src="image/pikachu.jpeg"></span>
+                <span><img src="image/img3.jpeg"></span>
+            </div>
+            <div>
+                <span><img src="image/img4.jpeg"></span>
+                <span><img src="image/img5.jpeg"></span>
+                <span><img src="image/img6.jpeg"></span>
+            </div>
+        </div>
+        <img src="image/next.png" id="nextBtn">
+    </div>
+
+    <script>
+
+
+        let scrollContainer = document.querySelector(".gallery");
+        let backBtn = document.getElementById("backBtn");
+        let nextBtn = document.getElementById("nextBtn");
+
+        // scrollContainer.addEventListener("wheel", (evt) => {
+        //     evt.preventDefault();
+        //     scrollContainer.scrollLeft += evt.deltaY;
+        //     scrollContainer.style.scrollBehavior = "auto";
+        // });
+
+        nextBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 900;
+        });
+        backBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehaviour = "smooth";
+            scrollContainer.scrollLeft -= 900;
+        });
+
+    </script>
+
+</body>
+
+</html>
